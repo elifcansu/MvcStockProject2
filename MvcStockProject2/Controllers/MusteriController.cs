@@ -11,6 +11,7 @@ namespace MvcStockProject2.Controllers
     {
         // GET: Musteri
         MvcDBStokEntities db = new MvcDBStokEntities();
+        [Authorize]
         public ActionResult Index(string p)
         {
             var degerler = from d in db.TBLMUSTERILER select d;
